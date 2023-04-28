@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Andrey O.</Authors>
     <Copyright>Copyright (c) 2023 Andrey Osintsev &lt;ozzy.ext@gmail.com&gt;</Copyright>
     <PackageProjectUrl>https://github.com/mylab-log/xunit</PackageProjectUrl>
@@ -15,8 +15,8 @@
     <LangVersion>8</LangVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IsPackable>true</IsPackable>
-    <AssemblyVersion>1.0.0.1301</AssemblyVersion>
-    <FileVersion>1.0.0.1301</FileVersion>
+    <AssemblyVersion>1.0.1.2804</AssemblyVersion>
+    <FileVersion>1.0.1.2804</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
