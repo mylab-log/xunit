@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
@@ -25,7 +27,6 @@ namespace MyLab.Log.XUnit
             _xUnitOutput = xUnitOutput;
             _formatter = formatter;
         }
-
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             LogEntry<TState> log = new LogEntry<TState>(logLevel, _categoryName, eventId, state, exception, formatter);
@@ -40,13 +41,9 @@ namespace MyLab.Log.XUnit
             {
                 _xUnitOutput.WriteLine(stringBuilder.ToString());
             }
-            catch (InvalidOperationException e) when (e.Message == "There is no currently active test.")
+            catch
             {
-                //Out of tests
-            }
-            catch (AggregateException e) when (e.Message.Contains("There is no currently active test."))
-            {
-                //Out of tests
+                //Do nothing
             }
         }
 
